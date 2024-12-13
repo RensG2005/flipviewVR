@@ -1,0 +1,54 @@
+{
+    "name": "ViveControllerInput",
+    "maps": [
+        {
+            "name": "ControllerActions",
+            "id": "869365fb-15a3-4ab2-b39b-a72debee2d6b",
+            "actions": [
+                {
+                    "name": "Touchpad",
+                    "type": "Value",
+                    "id": "fc4b58ea-38dd-4eae-aa15-da80ac288900",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TouchpadClicked",
+                    "type": "Button",
+                    "id": "4bcad8b8-e5fa-4412-b35c-39b3b809262c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5ba60662-0349-4b94-8e96-0108c8d3ad2c",
+                    "path": "<ViveController>{RightHand}/trackpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touchpad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22a2ccb9-41c9-4538-9bf7-3bf60ca334ec",
+                    "path": "<ViveController>/trackpadClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchpadClicked",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
