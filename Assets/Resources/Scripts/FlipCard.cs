@@ -57,8 +57,8 @@ public class FlipCard : MonoBehaviour
     private void UpdateCard()
     {
         // Use GetNextUnlearnedWord to find the next unlearned word
-        currentIndex = (currentIndex + 1) % csvReader.wordPairs.Count;
-        pair = csvReader.GetNextUnlearnedWord(currentIndex);
+        //currentIndex = (currentIndex + 1) % csvReader.wordPairs.Count;
+        pair = csvReader.GetNextUnlearnedWord(ref currentIndex);
 
         if (pair != null)
         {
@@ -70,9 +70,9 @@ public class FlipCard : MonoBehaviour
             string word2 = pair.word + "2";
             string word3 = pair.word + "3";
 
-            imageUpdater1.UpdateImage(word1); // Dynamically update to "exampleImage"
-            imageUpdater2.UpdateImage(word2); // Dynamically update to "exampleImage"
-            imageUpdater3.UpdateImage(word3); // Dynamically update to "exampleImage"
+            imageUpdater1.UpdateImage(word1); 
+            imageUpdater2.UpdateImage(word2); 
+            imageUpdater3.UpdateImage(word3); 
 
             int helpLevel = pair.helpLevel;
 

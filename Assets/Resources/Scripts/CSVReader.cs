@@ -40,19 +40,20 @@ public class CSVReader : MonoBehaviour
         return null;
     }
 
-    public WordPair GetNextUnlearnedWord(int currentIndex)
+    public WordPair GetNextUnlearnedWord(ref int currentIndex)
     {
+        int temp = currentIndex;
         // Loop through the list starting from the current index
-        while (currentIndex < wordPairs.Count)
+        do
         {
+            currentIndex = (currentIndex + 1) % wordPairs.Count; // Increment the index for the next call
             WordPair pair = wordPairs[currentIndex];
-            currentIndex++; // Increment the index for the next call
             if (!pair.learned)
             {
                 return pair; // Return the first unlearned word found
             }
-        }
-        
+        } while (currentIndex != temp);
+
         return null; // All words are learned
     }
 
